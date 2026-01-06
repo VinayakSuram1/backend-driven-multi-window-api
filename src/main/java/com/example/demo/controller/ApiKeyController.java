@@ -48,7 +48,6 @@ public class ApiKeyController {
                 .orElseThrow(() -> new RuntimeException("User not found"))
                 .getId();
 
-        // ✅ PREVENT RE-SUBMISSION
         if (!apiKeyRepository.findByUserIdAndActiveTrue(userId).isEmpty()) {
             return ResponseEntity.badRequest()
                     .body("API key already exists for this user");
