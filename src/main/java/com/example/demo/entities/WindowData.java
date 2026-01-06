@@ -29,7 +29,7 @@ public class WindowData {
     @Column(columnDefinition = "TEXT")
     private String data;
 
-    // ✅ Getters & Setters
+   
 
     public Long getId() {
         return id;
